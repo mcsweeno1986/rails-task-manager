@@ -1,0 +1,13 @@
+<button class ="btn btn-primary"><%= link_to "Edit", edit_task_path(@task)%></button>
+
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<i class="fa-solid fa-user"><%= @task.completed %></i>
+
+
+<a href="/tasks/">Back to List</a>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
